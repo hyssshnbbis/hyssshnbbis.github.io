@@ -2,10 +2,7 @@
 import { onMounted, reactive } from 'vue'
 import StarTrails from './components/StarTrails.vue'
 import { updateYear } from './JavaScript/updateYear.js'
-
-onMounted(() => {
-  updateYear()
-})
+import { smoothScroll } from './JavaScript/smoothScroll.js'
 
 const data = reactive({
   titleList: [
@@ -39,7 +36,7 @@ const data = reactive({
   }, {
     name: 'undefined',
     description: '喵喵喵~ 暂时没有别的东西 wv',
-    link: 'https://github.com/sun0225SUN/starter',
+    link: './',
   }],
 
   socialLinks: [{
@@ -71,6 +68,8 @@ onMounted(() => {
     else
       bg.classList.remove('fixed')
   })
+  // 页脚Copyright时间
+  updateYear()
 })
 </script>
 
@@ -124,7 +123,11 @@ onMounted(() => {
             Using a bit of code magic to make the world more adorable and wonderful. By cleverly reusing and extending code to create a more beautiful digital world. Meow~
           </p>
         </div>
-        <img hidden rounded-full h-25 w-25 transition md:block hover:-translate-y--2 src="./assets/images/avatar.webp" alt="avatar">
+        <div>
+          <button class="transparent-button" @click.prevent="smoothScroll('AboutMe')">
+          <img hidden rounded-full h-25 w-25 transition md:block hover:-translate-y-1 src="./assets/images/avatar.webp" alt="avatar">
+          </button>
+        </div>
       </div>
 
       <!-- 我的技能 -->
@@ -152,7 +155,7 @@ onMounted(() => {
       </div>
 
       <!-- 社交链接 -->
-      <div text-bold mb-2 ml-10 text-8 text-white>
+      <div text-bold mb-2 ml-10 text-8 text-white id="AboutMe">
         Find Me
       </div>
       <div flex flex-wrap justify-between>
@@ -198,5 +201,13 @@ onMounted(() => {
 #background.fixed {
   position: fixed;
   top: -70%;
+}
+
+.transparent-button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
