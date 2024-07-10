@@ -1,16 +1,17 @@
 <script setup>
 import { onMounted, reactive } from 'vue'
 import StarTrails from './components/StarTrails.vue'
+import { updateYear } from './JavaScript/updateYear.js'
+
+onMounted(() => {
+  updateYear()
+})
 
 const data = reactive({
   titleList: [
-    '热爱……',
-    '敬畏之心！',
-    '赞美之心！',
-    '我很好奇！',
     '你好，请多指教',
-    '*舒缓的现代音乐*',
     '希望能成为有趣的人',
+    'さあ、ゲームを始めよう',
     '相信美好的事情即将发生',
     '平凡的日常正奇迹的发生着',
     '你所热爱的<br/>就是你的生活',
@@ -20,72 +21,42 @@ const data = reactive({
     '当你在凝视着网页的时候<br/>网页也正在凝视着你',
   ],
   navLinks: [{
-    name: '博 客',
-    link: 'https://blog.sunguoqi.com',
+    name: 'Blog',
+    link: 'https://blog.hanahime.online',
   }, {
-    name: '影 集',
-    link: 'https://camera.sunguoqi.com',
-  }, {
-    name: '运 动',
-    link: 'https://bicycling.sunguoqi.com',
-  }, {
-    name: '留 言',
-    link: 'https://blog.sunguoqi.com/comments',
+    name: 'Index',
+    link: 'https://HanaKDev.github.io',
   }],
 
   myProjects: [{
-    name: 'Home',
+    name: 'Index',
     description: '个人简介、主页、引导页',
-    link: 'https://github.com/sun0225SUN/home',
+    link: 'https://github.com/HanaKDev/HanaKDev.github.io',
   }, {
     name: 'Blog',
     description: '个人博客，学习&随笔',
-    link: 'https://github.com/sun0225SUN/blog',
+    link: 'https://blog.hanahime.online',
   }, {
-    name: 'Brain',
-    description: '知识库、第二大脑',
-    link: 'https://github.com/sun0225SUN/brain',
-  }, {
-    name: 'Camera',
-    description: '摄影相册',
-    link: 'https://github.com/sun0225SUN/camera',
-  }, {
-    name: 'Camera Tools',
-    description: '摄影工具箱',
-    link: 'https://github.com/sun0225SUN/camera-tools',
-  }, {
-    name: 'Bicycling',
-    description: '骑行主页',
-    link: 'https://github.com/sun0225SUN/bicycling',
-  }, {
-    name: 'Life Map',
-    description: '人生地图、点亮足迹',
-    link: 'https://github.com/sun0225SUN/life-map',
-  }, {
-    name: 'Coder',
-    description: '闪闪发光的程序们',
-    link: 'https://github.com/sun0225SUN/coder',
-  }, {
-    name: 'Starter',
-    description: '前端项目起手架模版',
+    name: 'undefined',
+    description: '喵喵喵~ 暂时没有别的东西 wv',
     link: 'https://github.com/sun0225SUN/starter',
   }],
 
   socialLinks: [{
     icon: '<i i-ant-design-github-outlined />',
-    link: 'https://github.com/sun0225SUN',
+    link: 'https://github.com/HanaKDev',
     label: 'Github',
   }, {
     icon: '<i i-ant-design-x-outlined />',
-    link: 'https://twitter.com/sun0225SUN',
+    link: 'https://twitter.com/NobleLuluX',
     label: 'Twitter',
-  }, {
+  }, /* {
     icon: '<i i-ant-design-youtube-outlined />',
     link: 'https://youtube.com/@sun0225SUN',
     label: 'YouTube',
-  }, {
+  }, */ {
     icon: '<i i-ant-design-bilibili-outlined />',
-    link: 'https://space.bilibili.com/448488855/',
+    link: 'https://space.bilibili.com/511373704/',
     label: 'Bilibili',
   }],
 })
@@ -125,7 +96,7 @@ onMounted(() => {
           <div bg-green rounded-full h-3 w-3 />
         </div>
         <div text-4 text-white tracking-widest>
-          小孙同学祝您今天快乐
+          笨蛋依凌 / Hanahime
         </div>
       </div>
     </section>
@@ -138,19 +109,19 @@ onMounted(() => {
       <div mx-10 mb-10 flex justify-between>
         <div class="text-white/80">
           <p leading-10>
-            嗨，你好，我是小孙同学。
+            喵喵喵~ 你好，这里是是鸾依凌~
           </p>
           <p leading-10>
-            热爱编程、摄影、读书、旅行。
+            热爱编程、读书、白天睡觉。
           </p>
           <p leading-10>
-            热爱计算机科学和 IT 互联网事业，希望能成为一名优秀的开发者。
+            喜欢计算机科学和 IT 互联网事业，希望能成为一名优秀的开发者。
           </p>
           <p leading-10>
-            我们正在让这个世界变得更加美好，通过代码的重复使用和延展构建完美体系。
+            正在用代码小魔法，让这个世界变得更加可爱和美好。通过巧妙地重用和扩展代码，构建出更美好的的数字世界。喵~
           </p>
           <p leading-10>
-            We're making the world a better place. Through constructing elegant hierarchies for maximum code reuse and extensibility.
+            Using a bit of code magic to make the world more adorable and wonderful. By cleverly reusing and extending code to create a more beautiful digital world. Meow~
           </p>
         </div>
         <img hidden rounded-full h-25 w-25 transition md:block hover:-translate-y--2 src="./assets/images/avatar.webp" alt="avatar">
@@ -199,11 +170,17 @@ onMounted(() => {
       <div class="text-white/60" mt-50 f-c-c>
         <i i-ant-design-environment-outlined mr-1 />
         <p>路虽远行则将至，事虽难做则必成</p>
-        <i i-ant-design-environment-outlined ml-1 />
+        <!--  <i i-ant-design-environment-outlined ml-1 /> -->
       </div>
       <div class="text-white/60" mt-2 f-c-c gap-4>
-        <div>皖 ICP 备 2021010058 号</div>
-        <div>© 2024 小孙同学</div>
+        <div>
+          © 2019
+          <span id="yearSpan" />
+          鸾依凌
+        </div>
+        <div text-pink-800>
+          <a href="https://beian.miit.gov.cn">ICP: 粤ICP备2024275888号-1</a>
+        </div>
       </div>
     </footer>
   </main>
