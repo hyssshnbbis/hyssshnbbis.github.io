@@ -15,7 +15,7 @@ const data = reactive({
     '给时光以生命<br/>给岁月以文明',
     '路虽远行则将至<br/>事虽难做则必成',
     '一望无际的迷雾中<br/>有人在寻找光明',
-    '成长的路不需要惊天伟业,平凡踏实也同样精彩。',
+    '成长的路不需要惊天伟业,平凡踏实也同样精彩',
     '当你在凝视着网页的时候<br/>网页也正在凝视着你',
   ],
   navLinks: [{
@@ -46,7 +46,7 @@ const data = reactive({
     label: 'Github',
   }, {
     icon: '<i i-ant-design-x-outlined />',
-    link: 'https://twitter.com/NobleLuluX',
+    link: 'https://twitter.com/luanyaolingwu',
     label: 'Twitter',
   }, /* {
     icon: '<i i-ant-design-youtube-outlined />',
