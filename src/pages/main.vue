@@ -1,8 +1,8 @@
 <script setup>
-import { onMounted, reactive } from 'vue'
+import {onMounted, reactive} from 'vue'
 import StarTrails from '../components/StarTrails.vue'
-import { smoothScroll } from '../JavaScript/smoothScroll.js'
-import { updateYear } from '../JavaScript/updateYear.js'
+import {smoothScroll} from '../JavaScript/smoothScroll.js'
+import {updateYear} from '../JavaScript/updateYear.js'
 
 const data = reactive ({
   titleList: [
@@ -68,10 +68,11 @@ onMounted (() => {
   window.addEventListener ('scroll', () => {
     const bg = document.getElementById ('background')
     const scrollTop = window.scrollY
-    if (scrollTop > 0.7 * window.innerHeight)
+    if (scrollTop > 0.7 * window.innerHeight) {
       bg.classList.add ('fixed')
-    else
+    } else {
       bg.classList.remove ('fixed')
+    }
   })
   // 页脚Copyright时间
   updateYear ()
@@ -80,33 +81,33 @@ onMounted (() => {
 
 <template>
   <!-- 导航 -->
-  <nav absolute fixed bottom-4 left-4 z-20>
+  <nav absolute bottom-4 fixed left-4 z-20>
     <div v-for="(item, index) in data.navLinks" :key="index" my-6 text-3 text-white wv>
       <RouterLink
         v-if="item.isRouter" :to="{ name: item.link }"
-        opacity-75 text-white tracking-widest hover:opacity-100
+        hover:opacity-100 opacity-75 text-white tracking-widest
       >
         {{ item.name }}
       </RouterLink>
-      <a v-else :href="item.link" opacity-75 text-white tracking-widest hover:opacity-100>
+      <a v-else :href="item.link" hover:opacity-100 opacity-75 text-white tracking-widest>
         {{ item.name }}
       </a>
     </div>
   </nav>
 
   <!-- 主体 -->
-  <main bg-transparent absolute w-full top-75vh z-10>
+  <main absolute bg-transparent top-75vh w-full z-10>
     <!-- 大标题 -->
-    <section ml-15vw absolute>
+    <section absolute ml-15vw>
       <div
-        text-10 text-white font-bold tracking-widest
+        font-bold text-10 text-white tracking-widest
         v-html="data.titleList[Math.floor(Math.random() * data.titleList.length)]"
       />
       <div flex items-center>
-        <div mr-4 flex gap-2>
-          <div bg-red rounded-full h-3 w-3 />
-          <div bg-yellow rounded-full h-3 w-3 />
-          <div bg-green rounded-full h-3 w-3 />
+        <div flex gap-2 mr-4>
+          <div bg-red h-3 rounded-full w-3/>
+          <div bg-yellow h-3 rounded-full w-3/>
+          <div bg-green h-3 rounded-full w-3/>
         </div>
         <div text-4 text-white tracking-widest>
           笨蛋依凌 / Hanahime
@@ -114,12 +115,12 @@ onMounted (() => {
       </div>
     </section>
     <!-- 个人简介 -->
-    <section mx-9vw mt-90>
+    <section mt-90 mx-9vw>
       <!-- 关于我 -->
-      <div text-bold mb-4 ml-10 text-8 text-white>
+      <div mb-4 ml-10 text-8 text-bold text-white>
         About Me
       </div>
-      <div mx-10 mb-10 flex justify-between>
+      <div flex justify-between mb-10 mx-10>
         <div class="text-white/80">
           <p leading-10>
             喵喵喵~ 你好，这里是是鸾依凌~
@@ -142,7 +143,7 @@ onMounted (() => {
           <button class="transparent-button" @click.prevent="smoothScroll('AboutMe')">
             <img
               alt="avatar"
-              src="./assets/images/avatar.webp" hidden rounded-full h-25 w-25 transition md:block hover:-translate-y-1
+              h-25 hidden hover:-translate-y-1 md:block rounded-full src="../assets/images/avatar.webp" transition w-25
             >
           </button>
         </div>
@@ -154,19 +155,20 @@ onMounted (() => {
         </div> -->
 
       <!-- 我的项目 -->
-      <div text-bold mb-2 ml-10 text-8 text-white>
+      <div mb-2 ml-10 text-8 text-bold text-white>
         Projects
       </div>
-      <div mb-10 flex flex-wrap justify-between>
+      <div flex flex-wrap justify-between mb-10>
         <div v-for="(item, index) in data.myProjects" :key="index" class="basis-3/4 md:basis-1/6" mx-10 my-4>
           <a :href="item.link">
             <div
 
-              class="bg-white/5 hover:bg-white/10"
+              backdrop-blur-3xl
 
-              p-2 rounded-lg shadow-md flex-col transition backdrop-blur-3xl backdrop-opacity-60 hover:backdrop-opacity-100 hover:-translate-y-2
+              backdrop-opacity-60 class="bg-white/5 hover:bg-white/10" flex-col hover:-translate-y-2 hover:backdrop-opacity-100 p-2 rounded-lg
+              shadow-md transition
             >
-              <div text-bold opacity-75 text-white>
+              <div opacity-75 text-bold text-white>
                 {{ item.name }}
               </div>
               <div mt-1 opacity-50 text-3 text-white>
@@ -178,7 +180,7 @@ onMounted (() => {
       </div>
 
       <!-- 社交链接 -->
-      <div id="AboutMe" text-bold mb-2 ml-10 text-8 text-white>
+      <div id="AboutMe" mb-2 ml-10 text-8 text-bold text-white>
         Find Me
       </div>
       <div flex flex-wrap justify-between>
@@ -186,12 +188,13 @@ onMounted (() => {
           <a
             :href="item.link"
 
-            class="bg-white/5 hover:bg-white/10"
+            backdrop-blur-3xl
 
-            p-2 rounded-lg shadow-md flex-col justify-between items-center transition backdrop-blur-3xl backdrop-opacity-60 hover:backdrop-opacity-100 hover:-translate-y-2
+            backdrop-opacity-60 class="bg-white/5 hover:bg-white/10" flex-col hover:-translate-y-2 hover:backdrop-opacity-100 items-center justify-between p-2
+            rounded-lg shadow-md transition
           >
-            <div mb-1 text-white f-c-c v-html="item.icon" />
-            <div text-bold opacity-75 text-white>{{ item.label }}</div>
+            <div f-c-c mb-1 text-white v-html="item.icon"/>
+            <div opacity-75 text-bold text-white>{{ item.label }}</div>
           </a>
         </div>
       </div>
@@ -199,15 +202,15 @@ onMounted (() => {
 
     <!-- 底部 -->
     <footer mb-5>
-      <div class="text-white/60" mt-50 f-c-c>
-        <i i-ant-design-environment-outlined mr-1 />
+      <div class="text-white/60" f-c-c mt-50>
+        <i i-ant-design-environment-outlined mr-1/>
         <p>路虽远行则将至，事虽难做则必成</p>
         <!--  <i i-ant-design-environment-outlined ml-1 /> -->
       </div>
-      <div class="text-white/60" mt-2 f-c-c gap-4>
+      <div class="text-white/60" f-c-c gap-4 mt-2>
         <div>
           © 2019
-          <span id="yearSpan" />
+          <span id="yearSpan"/>
           鸾依凌
         </div>
         <div text-pink-800>
@@ -218,11 +221,11 @@ onMounted (() => {
   </main>
 
   <!-- 背景 -->
-  <div id="background" absolute wh-full left-0 top-0 z-0>
+  <div id="background" absolute left-0 top-0 wh-full z-0>
     <!-- 渐变阴影 -->
-    <div to-black-500 absolute h-80vh w-full bottom--30vh left-0 from-black bg-gradient-to-t />
+    <div absolute bg-gradient-to-t bottom--30vh from-black h-80vh left-0 to-black-500 w-full/>
     <!-- 星轨背景 -->
-    <StarTrails pb-45vh bg-black />
+    <StarTrails bg-black pb-45vh/>
   </div>
 </template>
 
