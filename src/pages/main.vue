@@ -49,7 +49,7 @@ const data = reactive ({
     link: 'https://github.com/HanaKDev',
     label: 'Github',
   }, {
-    icon: '<i i-ant-design-x-outlined />',
+    icon: '<i i-ant-design-twitter-outlined />',
     link: 'https://twitter.com/luanyaolingwu',
     label: 'Twitter',
   }, /* {
