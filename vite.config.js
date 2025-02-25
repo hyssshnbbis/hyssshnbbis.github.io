@@ -26,4 +26,11 @@ export default defineConfig({
   server: {
     open: true,
   },
+  build: {
+    rollupOptions: {
+      output: {
+        format: 'cjs',
+      },
+    },
+  },
 })
