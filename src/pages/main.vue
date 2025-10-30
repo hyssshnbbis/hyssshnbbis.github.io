@@ -199,7 +199,7 @@ onMounted (() => {
           鸾依凌
         </div>
         <div text-pink-800>
-          <a href="https://beian.miit.gov.cn">ICP: 粤ICP备2024275888号-1</a>
+          <a href="https://beian.miit.gov.cn">SCP: 1145141919810</a>
         </div>
       </div>
     </footer>
