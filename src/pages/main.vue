@@ -110,7 +110,7 @@ onMounted (() => {
           <div bg-green h-3 rounded-full w-3/>
         </div>
         <div text-4 text-white tracking-widest>
-          笨蛋依凌 / Hanahime
+          Hysss
         </div>
       </div>
     </section>
@@ -122,28 +122,13 @@ onMounted (() => {
       </div>
       <div flex justify-between mb-10 mx-10>
         <div class="text-white/80">
-          <p leading-10>
-            喵喵喵~ 你好，这里是是鸾依凌~
-          </p>
-          <p leading-10>
-            热爱编程、读书、白天睡觉。
-          </p>
-          <p leading-10>
-            喜欢计算机科学和 IT 互联网事业，希望能成为一名优秀的开发者。
-          </p>
-          <p leading-10>
-            正在用代码小魔法，让这个世界变得更加可爱和美好。通过巧妙地重用和扩展代码，构建出更美好的的数字世界。喵~
-          </p>
-          <p leading-10>
-            Using a bit of code magic to make the world more adorable and wonderful. By cleverly reusing and extending
-            code to create a more beautiful digital world. Meow~
-          </p>
+        <h1>None</h1>
         </div>
         <div>
           <button class="transparent-button" @click.prevent="smoothScroll('AboutMe')">
             <img
               alt="avatar"
-              h-25 hidden hover:-translate-y-1 md:block rounded-full src="../assets/images/avatar.webp" transition w-25
+              h-25 hidden hover:-translate-y-1 md:block rounded-full src="../assets/images/avatar.jpg" transition w-25
             >
           </button>
         </div>
