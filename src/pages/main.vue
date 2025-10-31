@@ -33,7 +33,7 @@ const data = reactive ({
   }, {
     name: '那我问你',
     description: '那你问我',
-    link: './',
+    link: './#/misskey-tos',
   }],
 
   socialLinks: [{
