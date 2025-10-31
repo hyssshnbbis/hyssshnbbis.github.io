@@ -24,7 +24,7 @@ export function updateYear() {
 
   function updateYear() {
     const currentYear = new Date().getFullYear()
-    if (currentYear >= 2019)
+    if (currentYear >= 2026)
       document.getElementById('yearSpan').textContent = ` - ${currentYear}`
   }
 

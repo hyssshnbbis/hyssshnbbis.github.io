@@ -6,17 +6,9 @@ import {updateYear} from '../JavaScript/updateYear.js'
 
 const data = reactive ({
   titleList: [
-    '你好，请多指教',
-    '希望能成为有趣的人',
-    'さあ、ゲームを始めよう',
-    '相信美好的事情即将发生',
-    '平凡的日常正奇迹的发生着',
+    '114514<br />1919810',
     '你所热爱的<br/>就是你的生活',
-    '给时光以生命<br/>给岁月以文明',
-    '路虽远行则将至<br/>事虽难做则必成',
-    '一望无际的迷雾中<br/>有人在寻找光明',
-    '当你在凝视着网页的时候<br/>网页也正在凝视着你',
-    '成长的路不需要惊天伟业<br/>平凡踏实也同样精彩',
+    '生活就像海洋<br/>只有意志坚强的人才能到达彼岸'
   ],
   navLinks: [{
     name: 'Misskey',
@@ -24,41 +16,41 @@ const data = reactive ({
     isRouter: true,
   }, {
     name: 'Blog',
-    link: 'https://blog.hanahime.online',
+    link: 'https://LOCALHOST',
   }, {
     name: 'Index',
-    link: 'https://HanaKDev.github.io',
+    link: 'https://hyssshnbbis.github.io',
   }],
 
   myProjects: [{
     name: 'Index',
-    description: '个人简介、主页、引导页',
-    link: 'https://github.com/HanaKDev/HanaKDev.github.io',
+    description: '个人主页',
+    link: 'https://github.com/hyssshnbbis/hyssshnbbis.github.io',
   }, {
     name: 'Blog',
-    description: '个人博客，学习&随笔',
-    link: 'https://blog.hanahime.online',
+    description: '个人博客',
+    link: 'https://LOCALHOST',
   }, {
-    name: 'undefined',
-    description: '喵喵喵~ 暂时没有别的东西 wv',
+    name: '那我问你',
+    description: '那你问我',
     link: './',
   }],
 
   socialLinks: [{
     icon: '<i i-ant-design-github-outlined />',
-    link: 'https://github.com/HanaKDev',
+    link: 'https://github.com/hyssshnbbis',
     label: 'Github',
   }, {
     icon: '<i i-ant-design-twitter-outlined />',
-    link: 'https://twitter.com/luanyaolingwu',
+    link: 'https://twitter.com/',
     label: 'Twitter',
   }, /* {
     icon: '<i i-ant-design-youtube-outlined />',
-    link: 'https://youtube.com/@sun0225SUN',
+    link: 'https://youtube.com/',
     label: 'YouTube',
   }, */ {
     icon: '<i i-ant-design-bilibili-outlined />',
-    link: 'https://space.bilibili.com/511373704/',
+    link: 'https://space.bilibili.com/611847904/',
     label: 'Bilibili',
   }],
 })
@@ -188,18 +180,18 @@ onMounted (() => {
     <!-- 底部 -->
     <footer mb-5>
       <div class="text-white/60" f-c-c mt-50>
-        <i i-ant-design-environment-outlined mr-1/>
-        <p>路虽远行则将至，事虽难做则必成</p>
+        <i i-ant-design-mail-outlined mr-1/>
+        <p>陈睿: 你所热爱的, 就是你的生活</p>
         <!--  <i i-ant-design-environment-outlined ml-1 /> -->
       </div>
       <div class="text-white/60" f-c-c gap-4 mt-2>
         <div>
-          © 2019
+          © 2025
           <span id="yearSpan"/>
-          鸾依凌
+          HYSSS
         </div>
         <div text-pink-800>
-          <a href="https://beian.miit.gov.cn">SCP: 1145141919810</a>
+          <a href="https://www.bilibili.com">SCP: 1145141919810</a>
         </div>
       </div>
     </footer>
