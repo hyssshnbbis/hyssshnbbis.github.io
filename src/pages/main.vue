@@ -44,11 +44,11 @@ const data = reactive ({
     icon: '<i i-ant-design-twitter-outlined />',
     link: 'https://x.com/YsssHNabbis123',
     label: 'Twitter',
-  }, /* {
+  }, {
     icon: '<i i-ant-design-youtube-outlined />',
-    link: 'https://youtube.com/',
+    link: 'https://www.youtube.com/channel/UCrO_iIBOvIDPupjT3-q30-A',
     label: 'YouTube',
-  }, */ {
+  }, {
     icon: '<i i-ant-design-bilibili-outlined />',
     link: 'https://space.bilibili.com/611847904/',
     label: 'Bilibili',
