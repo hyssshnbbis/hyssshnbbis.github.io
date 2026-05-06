@@ -42,7 +42,7 @@ const data = reactive ({
     label: 'Github',
   }, {
     icon: '<i i-ant-design-twitter-outlined />',
-    link: 'https://twitter.com/',
+    link: 'https://x.com/YsssHNabbis123',
     label: 'Twitter',
   }, /* {
     icon: '<i i-ant-design-youtube-outlined />',
